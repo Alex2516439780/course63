@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="courseForm">
+        <h1>Калькулятор Стоимости обучения</h1>
+        <label>
+            <select name="course" id="courseSelect" oninput="courseCalculator()">
+                <option value="none">Выберите курс</option>
+                <option value="pyton">Питон</option>
+                <option value="front">Фронтэнд</option>
+                <option value="da">дата аналитика</option>
+            </select>
+        </label>
+            <label>
+                Скидка:
+                <input type="range" name="discountRange" oninput = "courseCalculator()" value="0" min="0" max="50" step="5">
+                <span id="discountValue"> 0%</span>
+            </label>
+            <label>
+                Сумма:
+                <input type="number" id="courseSum" readonly>
+            
+        </label>
+    </div>
+    <div class="dynamicForm">
+        <label>
+            <input type="checkbox" id="confirm" onchange="activateButton()">
+            Подтвердить обраюотку данных
+        </label>
+
+        <button disabled>отпрвить</button>
+ 
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
